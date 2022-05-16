@@ -1,14 +1,15 @@
-import 'styles/index.scss';
+import "styles/index.scss";
 
-import Head from 'next/head';
+import Head from "next/head";
 
-import useCssMobileHeight from 'hooks/useCssMobileHeight';
+import useCssMobileHeight from "hooks/useCssMobileHeight";
+import { RecoilRoot } from "recoil";
 
 function App({ Component, pageProps }) {
   useCssMobileHeight();
 
   return (
-    <>
+    <RecoilRoot>
       <Head>
         <meta
           name="viewport"
@@ -16,7 +17,7 @@ function App({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} key="main" />
-    </>
+    </RecoilRoot>
   );
 }
 
