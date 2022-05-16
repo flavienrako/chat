@@ -10,7 +10,12 @@ const ChatList: React.FC = () => {
 
   return (
     <>
-      <ClubLogoSvg className="w-[120px]" />
+      <div className="flex justify-center my-2">
+        <ClubLogoSvg className="w-[100px]" />
+      </div>
+      <div className="flex justify-between">
+        <span>{chats.length}</span>
+      </div>
       {chats.map((chat) => (
         <List
           {...chat}
